@@ -1,0 +1,25 @@
+Fixed ONNX vs MXQ Accuracy Comparison Report
+==================================================
+
+Configuration:
+  NPU Model: ../models/yolov8s_best_globalCore_v1.mxq
+  ONNX Model: ../models/yolov8s_best.onnx
+  Test Frames: 10000
+  Confidence Threshold: 0.5
+  IoU Threshold: 0.5
+
+Accuracy Results:
+  Total Frames: 420
+  NPU Total Detections: 2682
+  ONNX Total Detections: 3103
+  Exact Matches (IoU > 0.9): 2490
+  Close Matches (IoU > 0.5): 2661
+  Average IoU: 0.954
+  Average Confidence Diff: 0.031
+  Detection Agreement Rate: 0.858
+
+Performance Results:
+  NPU Average Inference: 5.98 ms
+  ONNX Average Inference: 8.68 ms
+  NPU Average FPS: 167.17
+  ONNX Average FPS: 61.88

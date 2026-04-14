@@ -1,0 +1,2 @@
+device_label,duration_s,total_frames,total_dropped,total_decode_errors,overall_fps,lat_total_mean_ms,lat_total_p50_ms,lat_total_p90_ms,lat_total_p99_ms
+npu,60.1194588530343,12600,46325,11,209.58272480132382,41.94537991499861,40.44052405515686,57.115553435869515,66.52391980984248

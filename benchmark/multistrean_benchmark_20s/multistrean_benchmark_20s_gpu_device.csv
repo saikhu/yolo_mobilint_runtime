@@ -1,0 +1,2 @@
+device_label,duration_s,total_frames,total_dropped,total_decode_errors,overall_fps,lat_total_mean_ms,lat_total_p50_ms,lat_total_p90_ms,lat_total_p99_ms
+gpu,60.29126209008973,597,78954,5,9.901932374677074,1604.1344799829876,1733.2041910849512,2003.5809580003843,2157.862635278142

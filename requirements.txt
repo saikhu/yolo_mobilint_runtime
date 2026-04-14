@@ -1,0 +1,19 @@
+# One-time initialization
+config = InferenceConfig(model_path="your_model.mxq")
+engine = NPUInferenceEngine(config)
+engine.initialize()
+
+# Per-request processing
+def process_image(image_bytes):
+    image = decode_image(image_bytes)
+    detections = engine.detect(image)
+    return format_response(detections)
+
+
+
+
+
+Docker args
+
+--ipc=host --name mob_com --device /dev/aries
+0:/dev//aries0

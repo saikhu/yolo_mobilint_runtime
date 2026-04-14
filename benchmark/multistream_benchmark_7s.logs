@@ -1,0 +1,53 @@
+(mob_mac) mobilint@mobilint:~/.../NIPA/examples$ python multistream_benchmark.py   --device both-seq   --duration 60   --streams-file ./streams20.txt   --gpu-instances 7 --npu-instances 1 --save-csv-prefix multistrean_benchmark_7s
+[INFO] Loaded 7 sources. First 3: ['/home/mobilint/Desktop/NIPA/examples/input_7/1.mp4', '/home/mobilint/Desktop/NIPA/examples/input_7/2.mp4', '/home/mobilint/Desktop/NIPA/examples/input_7/3.mp4']
+
+=== Running GPU multistream ===
+
+[GPU] Resource summary:
+  CPU total avg/max: 50.7% / 55.7%
+  CPU proc  avg/max: 1559.4% / 4886.6%
+  RSS (proc) avg/max: 2605.9 / 2683.4 MB
+  Sys RAM  avg/max: 39588 / 39770 MB
+  GPU util  avg/max: 34.2% / 42.0%
+  GPU mem used avg/max: 4871 / 4904 MB
+
+===== GPU MULTISTREAM SUMMARY =====
+Duration: 60.1s | Total frames: 4312 | Dropped: 77465 | Decode errors: 14
+Overall FPS: 71.73
+Latency total mean/p50/p90/p99 (ms): 102.1 / 102.1 / 116.9 / 128.7
+
+Per-stream:
+ID     FPS   Frames   Drop  DecErr   Mean(ms)      p50      p90      p99  Source
+ 0    9.76      621  10588       2      102.5    102.6    117.7    129.2  /home/mobilint/Desktop/NIPA/examples/input_7/1.mp4
+ 1    9.81      618  11147       2      101.9    102.5    115.5    128.2  /home/mobilint/Desktop/NIPA/examples/input_7/2.mp4
+ 2    9.79      613  11212       2      102.2    102.0    116.9    128.7  /home/mobilint/Desktop/NIPA/examples/input_7/3.mp4
+ 3    9.82      619  10774       2      101.9    101.1    116.7    130.5  /home/mobilint/Desktop/NIPA/examples/input_7/4.mp4
+ 4    9.88      618  11030       2      101.3    100.9    116.5    126.3  /home/mobilint/Desktop/NIPA/examples/input_7/5.mp4
+ 5    9.80      615  11171       2      102.1    102.2    117.0    127.6  /home/mobilint/Desktop/NIPA/examples/input_7/6.mp4
+ 6    9.72      608  11543       2      102.9    103.5    118.0    127.5  /home/mobilint/Desktop/NIPA/examples/input_7/7.mp4
+
+=== Running NPU multistream ===
+I0909 14:38:41.020 4035943 model_impl.cc:696] Model constructed. (../models/yolov8s_best_globalCore_v1.mxq) 
+I0909 14:38:41.025 4035943 model_impl.cc:975] Model launched.
+
+[NPU] Resource summary:
+  CPU total avg/max: 63.6% / 68.4%
+  CPU proc  avg/max: 1893.4% / 2040.4%
+  RSS (proc) avg/max: 3317.1 / 3510.6 MB
+  Sys RAM  avg/max: 40238 / 40442 MB
+I0909 14:39:41.436 4035943 model_impl.cc:994] Model disposed.
+
+===== NPU MULTISTREAM SUMMARY =====
+Duration: 60.1s | Total frames: 12600 | Dropped: 46325 | Decode errors: 11
+Overall FPS: 209.58
+Latency total mean/p50/p90/p99 (ms): 41.9 / 40.4 / 57.1 / 66.5
+
+Per-stream:
+ID     FPS   Frames   Drop  DecErr   Mean(ms)      p50      p90      p99  Source
+ 0   23.91     1812   6676       2       41.8     40.4     57.3     66.7  /home/mobilint/Desktop/NIPA/examples/input_7/1.mp4
+ 1   23.81     1802   6623       2       42.0     40.4     57.5     65.9  /home/mobilint/Desktop/NIPA/examples/input_7/2.mp4
+ 2   23.65     1804   6252       1       42.3     40.9     57.3     66.7  /home/mobilint/Desktop/NIPA/examples/input_7/3.mp4
+ 3   23.61     1791   6587       1       42.3     40.7     57.9     66.4  /home/mobilint/Desktop/NIPA/examples/input_7/4.mp4
+ 4   24.29     1800   7138       2       41.2     39.7     56.2     65.7  /home/mobilint/Desktop/NIPA/examples/input_7/5.mp4
+ 5   23.72     1783   6598       2       42.1     40.6     57.1     66.9  /home/mobilint/Desktop/NIPA/examples/input_7/6.mp4
+ 6   23.89     1808   6451       1       41.9     40.3     56.9     65.8  /home/mobilint/Desktop/NIPA/examples/input_7/7.mp4

@@ -1,0 +1,35 @@
+{
+  "accuracy": {
+    "total_frames": 420,
+    "total_npu_detections": 2682,
+    "total_onnx_detections": 3103,
+    "exact_matches": 2490,
+    "close_matches": 2661,
+    "avg_iou": "0.95354986",
+    "avg_conf_diff": 0.030838576441911413,
+    "detection_agreement_rate": 0.8575572027070577
+  },
+  "performance": {
+    "npu_avg_inference_ms": 5.9819386146652205,
+    "onnx_avg_inference_ms": 8.684116899911757,
+    "npu_avg_total_ms": 5.9819386146652205,
+    "onnx_avg_total_ms": 16.16031367808492,
+    "npu_avg_fps": 167.1698866231119,
+    "onnx_avg_fps": 61.879986980457254,
+    "total_frames_processed": 420
+  },
+  "config": {
+    "npu_model_path": "../models/yolov8s_best_globalCore_v1.mxq",
+    "onnx_model_path": "../models/yolov8s_best.onnx",
+    "num_test_frames": 10000,
+    "img_size": [
+      640,
+      640
+    ],
+    "conf_threshold": 0.5,
+    "iou_threshold": 0.5,
+    "output_dir": "ONNXvsMXQaccuracy_comparison_v2",
+    "save_images": true,
+    "create_plots": true
+  }
+}
